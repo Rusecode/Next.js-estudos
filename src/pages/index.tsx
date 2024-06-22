@@ -9,7 +9,13 @@ const nome = 'Rafael'
 let aprende = 'Esta aprendendo'
 
 
+function calcDesc(v:number,d:number){
+  return v-d
+}
 
+function calcDesc2(v:number,d:number){
+  return v-(d/2)
+}
 
 
 export default function Home() 
@@ -18,12 +24,12 @@ export default function Home()
     <div>
       <Topo/>
       <div style={testecss}>
-      <div style={{color:'#f00', backgroundColor:'#bbb'}}>Inicio</div>
+           <div style={{color:'#f00', backgroundColor:'#bbb'}}>Inicio</div>
       </div>
     <div className='flex justify-center gap-3' >
-      <Card produto={'Mouse'} valor={700} desconto={10}/>
-      <Card produto={'Teclado'} valor={500} desconto={40} />
-      <Card produto={'Monitor'} valor={2000} desconto={0} />
+           <Card produto={'Mouse'} valor={700} desconto={10} funcao={calcDesc}/>
+           <Card produto={'Teclado'} valor={500} desconto={40} funcao={calcDesc2}/>
+           <Card produto={'Monitor'} valor={2000} desconto={0} funcao={calcDesc}/>
     </div>
     </div>
   )
