@@ -75,7 +75,10 @@ export default function produtosPagina(){
             valor={e.valor}
             desconto={e.desconto}
             funcao={calcDesc}
-          />
+          >
+          <div>Curso de react Next</div>
+          <div>Curso de react Next</div>
+          </Card>
           )
           }
         })

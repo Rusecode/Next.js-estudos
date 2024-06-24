@@ -3,6 +3,7 @@ interface CardProps{
    valor: number,
    desconto: number
    funcao: (valor: number, desconto: number) => number;
+   children:any
 }  
 
 //Os elementos de uma props sempre vem do pai para o filho, ou seja elas são criadas aonde vão ser chamadas e não aonde vão ser exportadas
@@ -17,6 +18,7 @@ export default function Card(props:CardProps){
                
             </div>):'Sem desconto'}
             <div>Valor final:{props.funcao(props.valor,props.desconto)}</div>
+            <div>{props.children[0]}</div>
         </div>
     )
 }
