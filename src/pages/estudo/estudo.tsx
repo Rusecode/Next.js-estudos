@@ -1,8 +1,6 @@
 
-// src/pages/Home.tsx
-
 import React from 'react';
-import { elemento1, elemento2, elemento3, elemento4 } from '@/components/elementos_home';
+import { elemento1,elemento2,elemento3,Elemento4,images } from '@/components/elementos_home';
 
 export default function Home() {
     return (
@@ -19,9 +17,7 @@ export default function Home() {
                     {elemento3()}
                 </div>
                 <div className='w-full h-full bg-[#7dd1fb] rounded-lg opacity-70 border-4 shadow-xl'>
-                    <div className='grid-container'>
-                        <elemento4 numCards={5}/>
-                    </div>
+                    <Elemento4 images={images} />
                 </div>
             </div>
         </div>

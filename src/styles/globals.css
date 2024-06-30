@@ -1,22 +1,48 @@
-/* src/styles/globals.css */
+/* globals.css */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --cor-bitcoin: #f79413;
+  --cor-cardano: #0088cc;
+  --cor-ethereum: #343434;
+  --cor-solana: linear-gradient(135deg, #8776db, #6599cd, #22dcb1);
+  --cor-toncoin: #0088cc; /* Assumindo a mesma cor de Cardano para Toncoin */
+}
 
+.text-bitcoin {
+  color: var(--cor-bitcoin);
+}
+
+.text-cardano {
+  color: var(--cor-cardano);
+}
+
+.text-ethereum {
+  color: var(--cor-ethereum);
+}
+
+.text-solana {
+  background: var(--cor-solana);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.text-toncoin {
+  color: var(--cor-toncoin);
 }
 
 @keyframes moveCards {
     0% {
-        transform: translateY(0%);
+        transform: translateY(100%) translateX(0%);
     }
-    20%, 100% {
-        transform: translateY(-100%);
+    25%, 75% {
+        transform: translateY(0%) translateX(0%);
     }
-}
-
-.animate-moveCard {
-    animation: moveCards 6s linear infinite;
+    100% {
+        transform: translateY(-100%) translateX(0%);
+    }
 }
