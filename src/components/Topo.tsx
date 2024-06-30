@@ -1,5 +1,6 @@
 import Card from "./Card";
 import Link from "next/link";
+import estudo from "@/pages/estudo/estudo";
 
 export default function Topo(){
     return(
@@ -31,6 +32,9 @@ export default function Topo(){
              </Link>
              <Link href={"/usestate/usestate"}>
                  State
+             </Link>
+             <Link href={"/estudo/estudo"}>
+                 estudo
              </Link>
         </nav>
 

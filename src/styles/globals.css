@@ -1,12 +1,22 @@
+/* src/styles/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'topo.css';
 
 :root {
 
 }
 
+@keyframes moveCards {
+    0% {
+        transform: translateY(0%);
+    }
+    20%, 100% {
+        transform: translateY(-100%);
+    }
+}
 
-
+.animate-moveCard {
+    animation: moveCards 6s linear infinite;
+}
